@@ -10,7 +10,7 @@ public class SimpleSourceFunction implements ParallelSourceFunction<Tuple2<Strin
 
     public void run(SourceContext<Tuple2<String, Integer>> sourceContext) throws Exception {
         while (isRunning) {
-            char c = (char) (int) (Math.random() * 26 + 65);
+            char c = (char) (int) (Math.random() * 26 + 66);
             sourceContext.collect(new Tuple2<String, Integer>(String.valueOf(c), 1));
         }
     }
